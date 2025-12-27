@@ -1,0 +1,23 @@
+name = "310roomshanghainese"
+main = "worker.js"
+compatibility_date = "2024-04-05"
+
+# --- 静态资源托管 ---
+[site]
+bucket = "./dist"
+
+# --- D1 数据库配置 ---
+[[d1_databases]]
+binding = "DB"
+database_name = "electric-db"
+database_id = "36d9c74f-4052-4a8a-9b0d-a3e569d39518"
+
+# --- 定时任务 (Cron) ---
+[triggers]
+crons = ["0 * * * *"]
+
+# --- 环境变量 (默认值) ---
+[vars]
+ROOM_ID = "310"
+PART_ID = "奉贤"
+BUILD_ID = "19"
